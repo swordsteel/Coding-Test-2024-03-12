@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: develop
+  application:
+    name: "%APP_NAME%"
+    version: "%APP_VERSION%"
+
+
+---
+###############################
+### Development environment ###
+###############################
+spring:
+  config:
+    activate:
+      on-profile: develop
+
+---
+##########################
+### Docker environment ###
+##########################
+spring:
+  config:
+    activate:
+      on-profile: docker
